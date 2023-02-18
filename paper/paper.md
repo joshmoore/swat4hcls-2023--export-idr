@@ -2,11 +2,11 @@
 title: 'LinkML, Bioschemas, and the Image Data Resource (IDR)'
 title_short: 'LinkML, Bioschemas, and the Image Data Resource (IDR)'
 tags:
-  - bioimaging
   - bioschemas
   - linkml
   - idr
   - ome
+  - bioimaging
 authors:
   - name: Josh Moore
     affiliation: 1,2
@@ -72,16 +72,20 @@ in order to describe the structure of data. LinkML provides a number of
 transformations for both schemas as well as instance documents.
 
 Bioschemas improves the findability of data on the web by providing machine
-readable markup in web pages, e.g., describing datasets.
+readable markup in web pages, e.g., describing datasets. Initial discussions
+around LinkML and Bioschemas integration took place during the
+[Biohackathon Germany 2022](https://www.denbi.de/de-nbi-events/1454-biohackathon-germany).
 
 The IDR is home to 13 million multi-dimensional image datasets. Each of these
 is annotated with (a subset of) Gene, Phenotype, Organism/Cell Line, Antibody,
 siRNA, and Chemical Compound metadata. Initial work has been performed to
 export this information as RDF using
 [omero-rdf](https://pypi.org/project/omero-rdf) since the information is stored
-in the data management system (OMERO) in PostgreSQL tables 
+in the data management system (OMERO) in PostgreSQL tables, and there is interest
+both in describing this model in LinkML as well as having Bioschemas markup in
+the landing pages of the exported information.
 
-The initial proposal for integration consisted of:
+As such, the initial proposal for integration consisted of:
 
 1. Defining a LinkML model to be applied to the output of [omero-rdf](https://pypi.org/project/omero-rdf)
 2. Defining a secondary Bioschemas LinkML model
@@ -89,8 +93,13 @@ The initial proposal for integration consisted of:
 
 # Results
 
-As an exploratory hackathon, much of the time was spent
-* Learning
+As an exploratory hackathon, much of the time was spent on explaining each of the
+projects -- LinkML, Bioschemas, and IDR -- to one another. Once a common understanding
+was achieved, it was decided that a LinkML model for the Bioschemas metadata was not
+a viable.
+
+
+
 * Automatic generation of a schema from OME.xml
 * No Bioschemas LinkML
 * Explored the use of mappings
@@ -99,7 +108,7 @@ As an exploratory hackathon, much of the time was spent
 
 # Discussion
 
-* Future work includes use of linkml-transformer
+Future work includes use of linkml-transformer
 
 
 ## Acknowledgements
