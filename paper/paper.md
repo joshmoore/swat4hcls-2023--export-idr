@@ -1,6 +1,6 @@
 ---
-title: 'LinkML, Bioschemas, and the Image Data Resource (IDR)"
-title_short: 'LinkML, Bioschemas, and the Image Data Resource (IDR)"
+title: 'LinkML, Bioschemas, and the Image Data Resource (IDR)'
+title_short: 'LinkML, Bioschemas, and the Image Data Resource (IDR)'
 tags:
   - bioimaging
   - bioschemas
@@ -15,6 +15,7 @@ authors:
     orcid: 0000-0003-3986-0510
     affiliation: 3,4
   - name: Cristina Gonzalez
+    affiliation: 8
   - name: Deepak R Unni
     orcid: 0000-0002-3583-7340
     affiliation: 5
@@ -40,6 +41,9 @@ affiliations:
     index: 6
   - name: Lawrence Berkeley National Laboratory
     index: 7
+  - name: Other
+    index: 8
+
 
 date: 16 February 2023
 cito-bibliography: paper.bib
