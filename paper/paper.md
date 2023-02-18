@@ -1,95 +1,105 @@
 ---
-title: 'BioHackEU22 Template'
-title_short: 'BioHackEU22 #26: unknown chemical substances'
+title: 'LinkML, Bioschemas, and the Image Data Resource (IDR)"
+title_short: 'LinkML, Bioschemas, and the Image Data Resource (IDR)"
 tags:
-  - cheminformatics
-  - PubChem
-  - unknown chemical substances
+  - bioimaging
+  - bioschemas
+  - linkml
+  - idr
+  - ome
 authors:
-  - name: First Author
-    affiliation: 1
-  - name: Last Author
-    orcid: 0000-0000-0000-0000
-    affiliation: 2
+  - name: Josh Moore
+    affiliation: 1,2
+    orcid: 0000-0003-4028-811X
+  - name: Leyla Jael Castro
+    orcid: 0000-0003-3986-0510
+    affiliation: 3,4
+  - name: Cristina Gonzalez
+  - name: Deepak R Unni
+    orcid: 0000-0002-3583-7340
+    affiliation: 5
+  - name: Laurent-Philippe Albou
+    affiliation: 6
+    orcid: 0000-0001-5801-1974
+  - name: Christopher Mungall
+    orcid: 0000-0002-6601-2165
+    affiliation: 7
+
 affiliations:
-  - name: First Affiliation
+  - name: German BioImaging, e.V.
     index: 1
-  - name: Second Affiliation
+  - name: NFDI4BIOIMAGE
     index: 2
-date: 8 November 2022
+  - name: ZBMED
+    index: 3
+  - name: NFDI4DataScience
+    index: 4
+  - name: Swiss Institute of Bioinformatics
+    index: 5
+  - name: Roche
+    index: 6
+  - name: Lawrence Berkeley National Laboratory
+    index: 7
+
+date: 16 February 2023
 cito-bibliography: paper.bib
-event: BH22EU
-biohackathon_name: "BioHackathon Europe 2022"
-biohackathon_url:   "https://biohackathon-europe.org/"
-biohackathon_location: "Paris, France, 2022"
-group: Project 26
+event: SWAT4HCLS23
+biohackathon_name: "SWAT4HCLS"
+biohackathon_url:   "[https://www.swat4ls.org/workshops/basel2023/hackathon/](https://www.swat4ls.org/workshops/basel2023/hackathon/)"
+biohackathon_location: "Basel, Switzerland, 2023"
+group: LBI
 # URL to project git repo --- should contain the actual paper.md:
-git_url: https://github.com/biohackrxiv/publication-template
+git_url: https://github.com/joshmoore/swat4hcls-2023--export-idr
 # This is the short authors description that is used at the
 # bottom of the generated paper (typically the first two authors):
-authors_short: First Author \emph{et al.}
+authors_short: Josh Moore \emph{et al.}
 ---
-
 
 # Introduction
 
-As part of the BioHackathon Europe 2022, we here report...
+As part of the BioHackathon SWAT4HCLS 2023, multiple project groups combined
+forces in order to explore possible points of integration between
+[LinkML](https://linkml.org) and [Bioschemas](https://bioschemas.org/) on the
+basis of a concrete use case, the Image Data Resource (IDR)
+[@discusses:Williams2017].
 
-# Formatting
+LinkML is a modeling langugage for linked data which captures schemas in YAML
+in order to describe the structure of data. LinkML provides a number of
+transformations for both schemas as well as instance documents.
 
-This document use Markdown and you can look at [this tutorial](https://www.markdowntutorial.com/).
+Bioschemas improves the findability of data on the web by providing machine
+readable markup in web pages, e.g., describing datasets.
 
-## Subsection level 2
+The IDR is home to 13 million multi-dimensional image datasets. Each of these
+is annotated with (a subset of) Gene, Phenotype, Organism/Cell Line, Antibody,
+siRNA, and Chemical Compound metadata. Initial work has been performed to
+export this information as RDF using
+[omero-rdf](https://pypi.org/project/omero-rdf) since the information is stored
+in the data management system (OMERO) in PostgreSQL tables 
 
-Please keep sections to a maximum of only two levels.
+The initial proposal for integration consisted of:
 
-## Tables and figures
-
-Tables can be added in the following way, though alternatives are possible:
-
-| Header 1 | Header 2 |
-| -------- | -------- |
-| item 1 | item 2 |
-| item 3 | item 4 |
-
-Table: Note that table caption is automatically numbered.
-
-A figure is added with:
-
-![Caption for BioHackrXiv logo figure](./biohackrxiv.png)
-
-# Other main section on your manuscript level 1
-
-Lists can be added with:
-
-1. Item 1
-2. Item 2
-
-# Citation Typing Ontology annotation
-
-You can use CiTO annotations, as explained in [this BioHackathon Europe 2021 write up](https://raw.githubusercontent.com/biohackrxiv/bhxiv-metadata/main/doc/elixir_biohackathon2021/paper.md) and [this CiTO Pilot](https://www.biomedcentral.com/collections/cito).
-Using this template, you can cite an article and indicate why you cite that article, for instance DisGeNET-RDF [@citesAsAuthority:Queralt2016].
-
-Possible CiTO typing annotation include:
-
-* citesAsDataSource: when you point the reader to a source of data which may explain a claim
-* usesDataFrom: when you reuse somehow (and elaborate on) the data in the cited entity
-* usesMethodIn
-* citesAsAuthority
-* discusses
-* extends
-* agreesWith
-* disagreesWith
+1. Defining a LinkML model to be applied to the output of [omero-rdf](https://pypi.org/project/omero-rdf)
+2. Defining a secondary Bioschemas LinkML model
+3. Defining a transformation from the exported RDF from the IDR into Bioschemas markup 
 
 # Results
 
+As an exploratory hackathon, much of the time was spent
+* Learning
+* Automatic generation of a schema from OME.xml
+* No Bioschemas LinkML
+* Explored the use of mappings
+* Discussed SSSOM
+* Settled on custom
 
 # Discussion
 
-...
+* Future work includes use of linkml-transformer
+
 
 ## Acknowledgements
 
-...
+The participants would like the thank the organizers of this years SWAT4HCLS for a fabulous venue and meeting.
 
 ## References
