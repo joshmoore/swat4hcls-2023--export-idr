@@ -14,7 +14,10 @@ authors:
   - name: Leyla Jael Castro
     orcid: 0000-0003-3986-0510
     affiliation: 3,4
-  - name: Cristina Gonzalez
+  - name: Cristina E. Gonzalez-Espinoza
+    orcid: 0000-0002-7808-0771
+    affiliation: 8
+  - name: Sarah Mouffok
     affiliation: 8
   - name: Deepak R Unni
     orcid: 0000-0002-3583-7340
@@ -41,7 +44,7 @@ affiliations:
     index: 6
   - name: Lawrence Berkeley National Laboratory
     index: 7
-  - name: Other
+  - name: Blue Brain Project, École polytechnique fédérale de Lausanne (EPFL)
     index: 8
 
 
