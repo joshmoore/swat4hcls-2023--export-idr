@@ -14,8 +14,6 @@ authors:
   - name: Leyla Jael Castro
     orcid: 0000-0003-3986-0510
     affiliation: 3,4
-  - name: Cristina Gonzalez
-    affiliation: 8
   - name: Deepak R Unni
     orcid: 0000-0002-3583-7340
     affiliation: 5
@@ -25,6 +23,13 @@ authors:
   - name: Christopher Mungall
     orcid: 0000-0002-6601-2165
     affiliation: 7
+
+unknown_authors:
+  - name: Cristina Gonzalez
+    affiliation: 8
+unknown_affiliation:
+  - name: Other
+    index: 8
 
 affiliations:
   - name: German BioImaging, e.V.
@@ -41,8 +46,6 @@ affiliations:
     index: 6
   - name: Lawrence Berkeley National Laboratory
     index: 7
-  - name: Other
-    index: 8
 
 
 date: 16 February 2023
