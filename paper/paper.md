@@ -91,23 +91,23 @@ the landing pages of the exported information.
 As such, the initial proposal for integration consisted of:
 
 1. Defining a LinkML model to be applied to the output of [omero-rdf](https://pypi.org/project/omero-rdf)
-2. Defining a secondary Bioschemas LinkML model
-3. Defining a transformation from the exported RDF from the IDR into Bioschemas markup 
+2. Defining a secondary LinkML model to represent Bioschemas
+3. Defining a transformation from the exported RDF from the IDR into Bioschemas markup
 
 # Results
 
 As an exploratory hackathon, much of the time was spent on explaining each of the
 projects -- LinkML, Bioschemas, and IDR -- to one another. Once a common understanding
 was achieved, it was decided that a LinkML model for the Bioschemas metadata was not
-a viable.
+yet viable. There was no existing software for transforming between two LinkML projects,
+though a new project, "linkml-transformer", may will this gap, and there were no use cases
+at the table to drive the definition of the model.
+
+Instead, the focus was on automatically generated a LinkML schema from the OME-XML schema
+[@discusses:Goldberg2005].
 
 
-
-* Automatic generation of a schema from OME.xml
-* No Bioschemas LinkML
-* Explored the use of mappings
-* Discussed SSSOM
-* Settled on custom
+Additional conversations covered the use of mappings with a particular focus on SSSOM.
 
 # Discussion
 
